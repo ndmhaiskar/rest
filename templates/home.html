@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head_title %}Home || {{ block.super }}{% endblock head_title %}
+
+{% block content %}
+{% include 'snippets/css.html' %}
+
+    <p><h3>I am so good to go</h3></p>
+    <p>
+        <a href="http://www.google.com">
+            Link To Google
+        </a>
+        <p>Variable new as {{ html_var }} and random number is {{ rand_num }} </p>
+    </p>
+    <p>
+        {% if rand_num is not None %}
+        Random number is {{ rand_num }}
+        {% endif %}
+    </p>
+    <p>
+        {% for some_item in some_list %}
+            {% if some_item|divisibleby:"2" %}
+                Even Number {{ some_item }}
+            {% endif %}
+        {% endfor %}
+    </p>
+    <p>Some item is {{ some_item }}</p>
+{% include 'snippets/js.html' %}
+{% endblock content %}

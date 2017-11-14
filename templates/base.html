@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <title>
+        {% block head_title %}
+            Hotel.com
+        {% endblock head_title %}
+
+    </title>
+    {% block link_css %}
+
+    {% endblock link_css %}
+</head>
+<body>
+{% include 'snippets/nav.html' %}
+    <div class="container">
+    {% block content %}
+
+    {% endblock content %}
+    </div>
+</body>
+    {% block link_js %}
+
+    {% endblock link_js %}
+
+</html>
